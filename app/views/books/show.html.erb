@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <% if flash[:notice] %>
+    <div class="alert alert-success" role="alert">
+    <p class="notice text-center" style="color:green;"><%= flash[:notice] %></p></div>
+    <% end %>
+      <p><strong>Title:</strong><%= @book.title %></p>
+      <p><strong>Body:</strong><%= @book.body %></p>
+
+      <%= link_to "Edit", edit_book_path(@book.id) %>
+      |
+      <span><a href="/books">Back</a></span>
+
+  </body>
